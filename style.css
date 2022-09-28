@@ -1,0 +1,121 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none; 
+}
+
+body{
+    display: grid;
+    grid-template: repeat(4, auto) / 1fr;
+}
+#navbar{
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+}
+#navbar img{
+    margin: 5px 25px;
+    border-radius: 50%;
+}
+#nav-link{
+    margin: auto 10px;
+    padding: 1px 10px;
+}
+#nav-link a{
+    margin: 1px 8px;
+    padding: 1px 10px;
+    color: #004aad;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+#nav-link a:hover{
+    color: black;
+    text-decoration: underline 4px solid #004aad;
+}
+#welcome-section{    
+    height: 100vh;
+    background: linear-gradient(
+        -45deg,
+        white 0%,
+        white 50%,
+        #004aad 50%,
+        #004aad 80%
+      );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#welcome-section h1{
+    width: 50%;
+    font-size: 2.5rem;
+}
+
+.project-tile{
+    margin: 60px;
+    display: grid;
+    grid-template: 1fr / repeat(4, 1fr);
+    grid-gap: 1px;
+}
+@media only screen and (max-width: 650px) {
+    #navbar{
+        background-color: #004aad;
+        /* justify-content: space-between; */
+    }
+  #nav-link a{
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+    #welcome-section{    
+        height: 100vh;
+    }
+    #welcome-section h1{
+        width: 60%;
+        font-size: 1.5rem;
+    }
+    .project-tile{
+        display: grid;
+        grid-template: repeat(4, 1fr) / auto;
+        grid-gap: 1px;
+    }
+}
+.project-tile a{
+    margin: 20px;
+}
+#tile-title{
+    margin: 2px 0px;
+    text-align: center; 
+    color: black;
+}
+/* #tile-title:hover{
+    background-color: #004aad;
+    color: black;
+} */
+.project-tile a:hover{
+    background-color: #004aad;
+    color: black;
+}
+#project-img{
+    max-width: 100%;
+    height: auto;
+}
+#my-profile{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #004aad;
+}
+#my-profile a{
+    margin: 25px;
+    padding: 2px;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+#my-profile a:hover{
+    color: black;
+}
